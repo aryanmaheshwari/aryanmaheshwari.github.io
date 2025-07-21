@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from 'react-router-dom';
 import './styles/Resume.css';
 
-const source = 'src/resume/Resume_Aryan_Maheshwari_FE.pdf';
+const source = '/Resume_Aryan_Maheshwari_FE.pdf';
 
 export default function Resume() {
     // const navigate = useNavigate();
