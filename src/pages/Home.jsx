@@ -1,5 +1,4 @@
 import React from 'react';
-import picture from '../assets/Image-075.JPEG';
 import './styles/Home.css';
 
 export default function Home() {
@@ -17,7 +16,7 @@ export default function Home() {
                     </div>
 
                     <div className="home-about-picture-container">
-                        <img src={picture} alt="Profile" />
+                        <img src='/Image-075.JPEG' alt="Profile" />
                     </div>
                 </div>
             </div>
