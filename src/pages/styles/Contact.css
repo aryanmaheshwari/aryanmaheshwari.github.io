@@ -1,0 +1,68 @@
+.contact-form-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  background: #f9f9f9;
+  padding: 40px 20px;
+  box-sizing: border-box;
+}
+
+.contact-form {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.enter-portion {
+  margin-bottom: 20px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+}
+
+.email-enter,
+.message {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  font-family: inherit;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.email-enter:focus,
+.message:focus {
+  border-color: #66bb6a;
+  outline: none;
+}
+
+.message {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-section {
+  text-align: right;
+}
+
+.submit-button {
+  background-color: #2ecc71;
+  color: #ffffff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #27ae60;
+}
