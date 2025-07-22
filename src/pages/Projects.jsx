@@ -16,7 +16,13 @@ export default function Projects() {
                     projectTitle='AI Chatbot'
                     imageSrc='/AI-Chatbot.png'
                     description='I built an AI chatbot similar to chatgpt that gets responses from LLMs based on user prompts.'
-                    githubLink='https://github.com/yourusername/project-two'
+                    githubLink='https://github.com/aryanmaheshwari/ai-chatbot'
+                />
+                <ProjectTitle
+                    projectTitle='Typescript Weather App'
+                    imageSrc='/TypescriptWeatherApp.png'
+                    description='I used Typescript with React to build a simple weather app that retrieves the current temperature of a city.'
+                    githubLink='https://github.com/aryanmaheshwari/weatherapp/'
                 />
                 <ProjectTitle
                     projectTitle='More projects are being added!'
