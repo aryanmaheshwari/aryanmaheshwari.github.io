@@ -25,6 +25,12 @@ export default function Projects() {
                     githubLink='https://github.com/aryanmaheshwari/weatherapp/'
                 />
                 <ProjectTitle
+                    projectTitle='Comment Section'
+                    imageSrc='/CommentSection.png'
+                    description='A project that simulates adding comments like we do in Reddit. There is more work to be done, but this is my initial take on it.'
+                    githubLink='https://github.com/aryanmaheshwari/comment-section'
+                />
+                <ProjectTitle
                     projectTitle='More projects are being added!'
                     imageSrc='/react.svg'
                     description='I am adding more projects to this portfolio, please see my main github account.'
