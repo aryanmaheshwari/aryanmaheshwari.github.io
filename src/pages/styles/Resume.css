@@ -15,6 +15,12 @@
     margin-bottom: 1.5rem;
 }
 
+.contact-button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
 .contact-button {
     margin-bottom: 1.5rem;
     padding: 0.5rem 1.5rem;
