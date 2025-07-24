@@ -19,7 +19,7 @@ export default function Title() {
             </div>
 
             <nav className="page-navigation">
-                {/* <Page name="Contact" useNav={navigate} />  TODO: fix the email sending*/}
+                <Page name="Contact" useNav={navigate} />
                 <Page name="Resume" useNav={navigate} />
                 <Page name="Projects" useNav={navigate} />
             </nav>

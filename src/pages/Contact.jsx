@@ -1,30 +1,51 @@
+import React from 'react';
 import emailjs from 'emailjs-com';
 import './styles/Contact.css';
 
-// function sendEmail(e) {
-//   e.preventDefault();
+const SERVICE_ID = 'service_lgqqv46';
+const TEMPLATE_ID = 'template_ckt5bd9';
+const PUBLIC_KEY = 'aN022oSLkfd39bq1i';
 
-//   emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
-//     .then((result) => {
-//       console.log('Email sent:', result.text);
-//     }, (error) => {
-//       console.error('Error:', error.text);
-//     });
-// }
+function sendEmail(e) {
+  e.preventDefault();
 
-import React from 'react';
+  emailjs.sendForm(
+    SERVICE_ID,
+    TEMPLATE_ID,
+    e.target,
+    PUBLIC_KEY
+  )
+    .then((result) => {
+      console.log('Email sent:', result.text);
+      alert("Email sent successfully");
+    }, (error) => {
+      console.error('Error:', error.text);
+      alert("Error sending email");
+    });
+
+  e.target.reset(); // Optional
+}
 
 export default function Contact() {
   return (
     <div className="contact-form-main-container">
-      <form className="contact-form">
+      <form className="contact-form" onSubmit={sendEmail}>
         <div className="enter-portion">
           <div className="form-section">
             <input
               className="email-enter"
               type="email"
               name="user_email"
-              placeholder="Type your email here..."
+              placeholder="Your email"
+              required
+            />
+          </div>
+          <div className="form-section">
+            <input
+              className="title-enter"
+              type="text"
+              name="user_title"
+              placeholder="Message title"
               required
             />
           </div>
