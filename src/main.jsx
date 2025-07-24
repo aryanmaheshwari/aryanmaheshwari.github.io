@@ -11,7 +11,7 @@ import Projects from './pages/Projects.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/">
+    <HashRouter>
       <Title />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -20,6 +20,6 @@ createRoot(document.getElementById('root')).render(
         <Route path="/projects" element={<Projects />} />
         {/* <Route path="/project/id:" element={<Project />} /> */}
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>,
 )
