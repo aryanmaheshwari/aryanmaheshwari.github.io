@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter } from "react-router-dom";
 import Home from './pages/Home.jsx'
 import Title from './components/Title.jsx'
 import Contact from './pages/Contact.jsx'
@@ -10,7 +11,7 @@ import Projects from './pages/Projects.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Title />
       <Routes>
         <Route path="/" element={<Home />} />
