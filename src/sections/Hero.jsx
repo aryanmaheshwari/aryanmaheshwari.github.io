@@ -33,17 +33,19 @@ export default function Hero() {
         <Greeting />, I'm Aryan.
       </p>
       <h1 className="animate-fade-up mt-2 max-w-3xl text-4xl font-semibold leading-[1.08] tracking-tight [animation-delay:120ms] sm:text-6xl">
-        I turn messy customer problems into AI agents that{' '}
-        <span className="font-serif font-normal italic text-brand">ship.</span>
+        I turn messy customer problems into AI products people{' '}
+        <span className="font-serif font-normal italic text-brand">use.</span>
       </h1>
       <p className="animate-fade-up mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground [animation-delay:180ms] sm:text-lg">
-        Forward Deployed Engineer at BackOps AI, building and running agentic systems for enterprise
-        customers. Before that I was the founding frontend engineer at Spare CS, and spent three years
-        at Veeva Systems building clinical-trial analytics at the scale of 1M+ subjects.
+        Product engineer who owns the whole loop: finding the problem, deciding what to build and what to
+        cut, then designing, shipping, and measuring it. Right now that's agentic systems for enterprise
+        customers at BackOps AI, and <a href="#product" className="text-foreground underline decoration-border underline-offset-4 hover:decoration-foreground">Self-Serve Fashion</a>,
+        an AI stylist I built solo. Before that: founding frontend engineer at Spare CS, and three years at
+        Veeva Systems.
       </p>
 
       <div className="animate-fade-up mt-8 flex flex-wrap items-center gap-2 [animation-delay:240ms]">
-        <Button href="#work">
+        <Button href="#product">
           See my work <LuArrowRight />
         </Button>
         <Button href={profile.github} variant="outline" size="icon" aria-label="GitHub">

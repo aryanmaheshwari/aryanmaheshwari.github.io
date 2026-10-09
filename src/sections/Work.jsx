@@ -5,7 +5,7 @@ import { caseStudies } from '../data/content';
 
 export default function Work() {
   return (
-    <Section id="work" eyebrow="Selected work" title="Problems I've owned end to end">
+    <Section id="work" eyebrow="Veeva Systems · 2022 — 2025" title="Problems I've owned end to end">
       <div className="grid gap-4 md:grid-cols-3">
         {caseStudies.map((c, i) => (
           <Card
