@@ -24,7 +24,8 @@ export default function About() {
             <p>
               What I like most is the whole loop: sitting in a discovery call, finding the workflow that's
               quietly eating someone's day, then scoping, shipping, and measuring the thing that fixes it.
-              Good UX instincts turn out to matter a lot for agents too.
+              Good UX instincts turn out to matter a lot for agents too. It's also why I built Self-Serve
+              Fashion solo: I wanted to make every call myself, from who it's for to what to cut.
             </p>
             <p>
               I speak <span className="text-foreground">English, Spanish, Hindi, Urdu, and Portuguese</span>,

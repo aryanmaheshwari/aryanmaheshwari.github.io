@@ -1,5 +1,6 @@
 import Nav from './sections/Nav';
 import Hero from './sections/Hero';
+import CaseStudy from './sections/CaseStudy';
 import Current from './sections/Current';
 import Playground from './sections/Playground';
 import Work from './sections/Work';
@@ -14,6 +15,7 @@ export default function App() {
       <Nav />
       <main className="mx-auto max-w-5xl px-4 sm:px-6">
         <Hero />
+        <CaseStudy />
         <Current />
         <Playground />
         <Work />

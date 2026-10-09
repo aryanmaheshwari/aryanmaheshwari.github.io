@@ -1,6 +1,6 @@
 export const profile = {
   name: 'Aryan Maheshwari',
-  role: 'Forward Deployed Engineer',
+  role: 'Product Engineer',
   location: 'San Francisco, CA',
   email: 'aryanmaheshwari@gmail.com',
   github: 'https://github.com/aryanmaheshwari',
@@ -24,6 +24,99 @@ export const stats = [
   { value: '12', label: 'production agents built or re-architected' },
   { value: '1M+', label: 'subjects handled by Bulk Lock & Freeze' },
 ];
+
+// Flagship product case study, shown right after the hero. Chapter and decision times are seconds
+// into the demo video, so "Watch" links land on the moment each decision shows up in the product.
+export const featured = {
+  name: 'Self-Serve Fashion',
+  eyebrow: 'Case study · Built solo, 0 → 1',
+  title: 'an AI stylist that decides what you wear',
+  problem:
+    'Most men find putting outfits together harder than it should be, and wardrobe apps make it worse: they hand you a catalog to maintain and a blank canvas to fill. I wanted the opposite. Open the app, and today’s outfit is already picked from clothes you own, matched to your coloring and the forecast.',
+  bet: 'The bet: make the decision for him. Everything else in the app exists to make that one answer better.',
+  facts: [
+    { label: 'My role', value: 'Solo: product, design, engineering' },
+    { label: 'Platform', value: 'Installable PWA, phone-first' },
+    { label: 'Stack', value: 'React 19, TypeScript, FastAPI, Claude' },
+    { label: 'AI', value: '4 agents, each with a rule-based fallback' },
+  ],
+  video: {
+    src: '/projects/self-serve-fashion/demo.mp4',
+    poster: '/projects/self-serve-fashion/poster.jpg',
+    duration: 95.6,
+    label:
+      'Screen recording of Self-Serve Fashion on a phone: signing up, color analysis from a selfie, making an avatar, adding clothes, then the daily outfit, week plan, styling and sponsored picks.',
+  },
+  chapters: [
+    { t: 0, label: 'Sign up & colors' },
+    { t: 12.1, label: 'Avatar' },
+    { t: 20.5, label: 'Closet in seconds' },
+    { t: 31.3, label: 'Routine & weather' },
+    { t: 41.8, label: 'Today’s outfit' },
+    { t: 61.2, label: 'Closet & week plan' },
+    { t: 73.4, label: 'Styling' },
+    { t: 84.5, label: 'Sponsored picks' },
+  ],
+  decisions: [
+    {
+      title: 'Answer, don’t ask',
+      body: 'The home screen isn’t a closet or a feed. It’s one outfit, worn by your avatar, next to today’s forecast, with the rest of the week a tap away.',
+      tradeoff: 'Less browsing up front. Swap and the Style tab are there for people who want to choose.',
+      t: 41.8,
+    },
+    {
+      title: 'Make photographing your closet optional',
+      body: 'Photographing a whole wardrobe is the main reason people abandon these apps. So you can tap the staples you own instead (oxford shirt, chinos, white sneakers) and get outfits immediately. In the demo, 11 pieces go in in about ten seconds.',
+      tradeoff: 'Generic illustrations instead of your clothes, until you swap in real photos.',
+      t: 20.5,
+    },
+    {
+      title: 'Value before effort',
+      body: 'Setup is four short steps, about three minutes, ending in a ready outfit. Every step can be skipped and finished later, it resumes where you left off, and skipping everything still lands on a useful screen.',
+      tradeoff: 'Thinner profiles at first, so every agent has to work with partial data.',
+      t: 0,
+    },
+    {
+      title: 'Plan around real life',
+      body: 'The planner picks an outfit per day against the local forecast and your weekday routine, avoids repeats, and sends a morning reminder in your time zone. When it tops up the week, it never changes a day you’ve already seen.',
+      tradeoff: 'More planning logic in exchange for a plan people can trust.',
+      t: 68.2,
+    },
+    {
+      title: 'Sponsored, never pay-to-rank',
+      body: 'Partner brands pay to be eligible, but picks are ranked purely on fit: gaps in your closet and colors that suit you. Budget never affects order, and every pick is labeled Sponsored with a plain-language disclosure.',
+      tradeoff: 'Brands can’t buy the top slot. A stylist you can’t trust isn’t worth paying for.',
+      t: 84.5,
+    },
+    {
+      title: 'AI with a floor',
+      body: 'Claude handles color analysis, styling and shopping with schema-constrained output. Every agent also has a rule-based fallback (pixel analysis plus classic menswear rules), so the morning outfit never fails because an API did. Every run is logged with the provider used.',
+      tradeoff: 'Two implementations per agent to maintain.',
+      t: 73.4,
+    },
+  ],
+  cuts: [
+    { what: '3D avatar', why: 'A 2D avatar delivers the “see it on you” moment now. 3D needs an avatar service or a custom pipeline.' },
+    { what: 'Pinterest API', why: 'Needs an approved developer app and per-user OAuth. A curated inspiration library links out instead.' },
+    { what: 'Real payments', why: 'Campaigns are marked paid in test mode. A Stripe webhook is the swap-in.' },
+    { what: 'Push & email', why: 'Reminders arrive in-app and as browser notifications first. Web Push plugs into one service.' },
+    { what: 'App Store', why: 'An installable PWA ships today. Wrapping it with Capacitor comes once people use it.' },
+  ],
+  craft: [
+    { what: 'Accessible', why: 'WCAG AA contrast, large touch targets, AI-written alt text for every garment, and text size, contrast and motion settings that follow the account.' },
+    { what: 'Inclusive avatar', why: 'Five builds, ten skin tones or one matched from the selfie, seven hairstyles, and wheelchair or cane options.' },
+    { what: 'Private', why: 'Location data is stripped from uploads, photos are only served to their owner, and deleting an account deletes its photos.' },
+    { what: 'Written-down design', why: 'A design doc every screen follows: black and white structure, one copper accent that means “you can act here”, native patterns.' },
+  ],
+  build: [
+    'Frontend: React 19 and TypeScript, an installable PWA with a tab bar on phones and a sidebar on desktop. Sheets are built on the native <dialog> for focus handling.',
+    'Backend: Python, FastAPI and SQLAlchemy 2 across 17 tables, with SQLite in development and MySQL in production.',
+    'Agents: color (selfie to seasonal palette, plus a verdict for every garment), styling (outfits for an occasion from your own closet), shopping (sponsored picks ranked on fit) and planner (up to 14 days against the forecast).',
+    'Weather: Open-Meteo forecasts become a warmth target, outerwear and rain needs, and plain-language tips that every agent uses.',
+    'Tests: 26 API and agent tests, plus Playwright browser tests at phone and desktop sizes, in light and dark, each run against a throwaway database.',
+  ],
+  repo: 'https://github.com/aryanmaheshwari/self-serve-fashion',
+};
 
 // Current role, shown in its own section above the Playground.
 export const current = {
@@ -190,9 +283,10 @@ export const projects = [
 ];
 
 export const skills = [
+  { group: 'Product', items: ['Discovery calls', 'Scoping & prioritization', 'UX & interaction design', 'Design systems', 'Onboarding & activation', 'PWAs'] },
   { group: 'AI & Agents', items: ['Claude', 'OpenAI', 'LangChain', 'LangGraph', 'Multi-agent orchestration', 'Eval set design', 'Tool-using agents', 'MCP servers', 'RAG', 'Context engineering', 'Prompt design'] },
   { group: 'ML & Data', items: ['PyTorch', 'MLflow', 'Time-series forecasting', 'Batch inference', 'Feature engineering'] },
-  { group: 'Frontend', items: ['React', 'TypeScript', 'JavaScript', 'Component libraries', 'WCAG 2.1 AA', 'ARIA', 'i18n / l10n', 'Jest'] },
-  { group: 'Backend', items: ['Node.js', 'Express', 'GraphQL', 'REST APIs', 'Python', 'Django', 'PostgreSQL', 'MongoDB', 'MySQL'] },
+  { group: 'Frontend', items: ['React', 'TypeScript', 'JavaScript', 'Component libraries', 'WCAG 2.1 AA', 'ARIA', 'i18n / l10n', 'Jest', 'Playwright'] },
+  { group: 'Backend', items: ['Node.js', 'Express', 'GraphQL', 'REST APIs', 'Python', 'FastAPI', 'SQLAlchemy', 'Django', 'PostgreSQL', 'MongoDB', 'MySQL'] },
   { group: 'Platforms', items: ['AWS', 'CI/CD', 'GitHub', 'GitLab', 'Jira', 'Agile'] },
 ];

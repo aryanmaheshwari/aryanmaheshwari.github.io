@@ -6,7 +6,7 @@ import { current } from '../data/content';
 
 export default function Current() {
   return (
-    <Section id="now" eyebrow={`Now · ${current.company}`} title="Agents in production, for real customers">
+    <Section id="now" eyebrow={`${current.company} · ${current.period}`} title="Agents in production, for real customers">
       <p className="-mt-6 mb-8 max-w-2xl text-muted-foreground">{current.intro}</p>
       <div className="grid gap-4 md:grid-cols-2">
         {current.items.map((c) => (

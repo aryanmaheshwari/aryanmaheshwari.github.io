@@ -16,7 +16,8 @@ export default function Contact() {
             Let's build something <span className="font-serif font-normal italic">people love</span> to use.
           </h2>
           <p className="mx-auto mt-4 max-w-md text-muted-foreground">
-            I'm open to forward deployed, product, and applied AI engineering roles. The fastest way to reach me is email.
+            I'm looking for product engineering roles on AI products, where I can own a problem from discovery
+            to shipped. The fastest way to reach me is email.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-2">
             <CopyEmail variant="default" />

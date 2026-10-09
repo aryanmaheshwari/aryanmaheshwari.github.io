@@ -4,11 +4,12 @@ import ThemeToggle from '../components/ThemeToggle';
 import { profile } from '../data/content';
 
 const links = [
-  { href: '#now', label: 'Now' },
+  { href: '#product', label: 'Case study' },
+  { href: '#now', label: 'BackOps AI' },
   { href: '#playground', label: 'Playground' },
   { href: '#work', label: 'Veeva' },
   { href: '#experience', label: 'Experience' },
-  { href: '#projects', label: 'Projects' },
+  { href: '#projects', label: 'Side projects' },
   { href: '#about', label: 'About' },
 ];
 
@@ -25,12 +26,12 @@ export default function Nav() {
         </a>
 
         <nav className="flex items-center gap-1">
-          <div className="hidden items-center md:flex">
+          <div className="hidden items-center lg:flex">
             {links.map((l) => (
               <a
                 key={l.href}
                 href={l.href}
-                className="rounded-md px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+                className="whitespace-nowrap rounded-md px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
               >
                 {l.label}
               </a>
